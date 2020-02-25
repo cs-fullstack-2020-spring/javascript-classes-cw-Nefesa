@@ -3,7 +3,8 @@
 
 // ### Problem 1:
 // Create a GitHubRepository class with properties userName, fileName, descriptionOfRepository, and code. Create a function that prints all properties. Create an object of the class and use the function.
-
+ 
+// declared class
 class GitHubRepository{
     constructor(userName,fileName,descriptionOfRepository)
     {
@@ -32,16 +33,54 @@ class Movie {
     changeRating(changedRating){
         this.changeRating = changedRating; 
     }
+    changeyearReleased(changedyrReleased){
+        this.changeyearReleased = changedyrReleased;
+    }
+    
 }
-let oldRaiting = new Movie("Love Jones","R","196");
+
+let oldRelease = new Movie ("Love Jones","R","1996");
+oldRelease.changeRating();
+oldRelease.changeyearReleased();
+
+console.log(`${oldRelease.movieName}\n ${oldRelease.rating}\n${oldRelease.yearReleased}`);
+
+
 
 
 
 
 // ### Problem 3:
-// Create a Student class with the following properties : studentName, codeSchoolCohort, and grades(grades should be an array of objects and each object should have the properties assignemtName and assignemtnScore). Create a method that accepts a student name and updates the studentName of an instance of your Student Class. Create a method that accepts an assignment name and assignment score and adds a grade object to the grades array. Create two instances of this class with empty grade arrays. Update the name of one instance of the Student Class using the class method. Add one grade object to each instance of the Student Class grade array using the class method.
+// Create a Student class with the following properties : studentName, codeSchoolCohort, and grades(grades should be an array of objects and each object should have the properties assignemtName and assignemtnScore). 
+
+// Create a method that accepts a student name and updates the studentName of an instance of your Student Class. 
+
+// Create a method that accepts an assignment name and assignment score and adds a grade object to the grades array. 
+
+// Create two instances of this class with empty grade arrays. Update the name of one instance of the Student Class using the class method. Add one grade object to each instance of the Student Class grade array using the class method.
 
 // HINT : use object literal notation to create a grade object in the grade array for each instance of the Student Class
+
+class Student{
+    constructor(studentName, codeSchoolCohort, grades){
+        this.studentName = studentName
+        this.codeSchoolCohort = codeSchoolCohort
+        this.grades = grades 
+    }
+    acceptStudentName(assignmentName){
+        this.assignmentName.push(assignmentName);
+    }
+    acceptStudentGrade(assigntmentGrade){
+        this.assigntmentGrade.push(assigntmentGrade);
+
+    }
+}
+
+
+
+
+
+
 
 // ### Challenge 1:
 // Create a Person class with three properties: name, weight, and height. Create a method that can calculate the BMI of a person using the formula below. Create an object of the class and use the function.
