@@ -1,54 +1,46 @@
 
 // # JavaScript-classes_objects-cw
 
-// ### Problem 1:
-// Create a GitHubRepository class with properties userName, fileName, descriptionOfRepository, and code. Create a function that prints all properties. Create an object of the class and use the function.
- 
-// declared class
-class GitHubRepository{
-    constructor(userName,fileName,descriptionOfRepository)
-    {
-        this.userName = userName;
-        this.fileName = fileName;
-        this.descriptionOfRepository = descriptionOfRepository;
-    }
-    printGitHubRepository(){
-        console.log(`userName${this.userName}\n fileName${this.fileName}\n descriptionOfRepository${this.descriptionOfRepository}`)
-    }
-}
-let hubRepository = new GitHubRepository ("Nefesa","CodeSchool","CW");
-hubRepository.printGitHubRepository();
+// // ### Problem 1:
+// // Create a GitHubRepository class with properties userName, fileName, descriptionOfRepository, and code. Create a function that prints all properties. Create an object of the class and use the function.
 
-
+// // declared class
+// class GitHubRepository{
+//     constructor(userName,fileName,descriptionOfRepository)
+//     {
+//         this.userName = userName;
+//         this.fileName = fileName;
+//         this.descriptionOfRepository = descriptionOfRepository;
+//     }
+//     printGitHubRepository(){ // !! make sure you take full advantage of string templting to format your text
+//         console.log(`userName${this.userName}\n fileName${this.fileName}\n descriptionOfRepository${this.descriptionOfRepository}`)
+//     }
+// }
+// let hubRepository = new GitHubRepository ("Nefesa","CodeSchool","CW");
+// hubRepository.printGitHubRepository();
 
 // ### Problem 2:
 // Create a Movie class with the following properties: movieName, rating, and yearReleased. Create a method to change the rating and another one to change the yearReleased properties using prompt. Create an object of the class and use the two methods you created.
 
 class Movie {
-    constructor(movieName,rating,yearReleased){
+    constructor(movieName, rating, yearReleased) {
         this.movieName = movieName
         this.rating = rating
         this.yearReleased = yearReleased
     }
-    changeRating(changedRating){
-        this.changeRating = changedRating; 
+    changeRating(changedRating) {
+        // !! you should be using prompt to get the new rating value
+        this.changeRating = changedRating;
     }
-    changeyearReleased(changedyrReleased){
+    changeyearReleased(changedyrReleased) {
+        // !! you should be using prompt to get the new year released value
         this.changeyearReleased = changedyrReleased;
     }
-    
 }
-
-let oldRelease = new Movie ("Love Jones","R","1996");
+let oldRelease = new Movie("Love Jones", "R", "1996");
 oldRelease.changeRating();
 oldRelease.changeyearReleased();
-
 console.log(`${oldRelease.movieName}\n ${oldRelease.rating}\n${oldRelease.yearReleased}`);
-
-
-
-
-
 
 // ### Problem 3:
 // Create a Student class with the following properties : studentName, codeSchoolCohort, and grades(grades should be an array of objects and each object should have the properties assignemtName and assignemtnScore). 
@@ -61,26 +53,21 @@ console.log(`${oldRelease.movieName}\n ${oldRelease.rating}\n${oldRelease.yearRe
 
 // HINT : use object literal notation to create a grade object in the grade array for each instance of the Student Class
 
-class Student{
-    constructor(studentName, codeSchoolCohort, grades){
+class Student {
+    constructor(studentName, codeSchoolCohort, grades) {
         this.studentName = studentName
         this.codeSchoolCohort = codeSchoolCohort
-        this.grades = grades 
+        this.grades = grades
     }
-    acceptStudentName(assignmentName){
+    acceptStudentName(assignmentName) {
         this.assignmentName.push(assignmentName);
     }
-    acceptStudentGrade(assigntmentGrade){
+    acceptStudentGrade(assigntmentGrade) {
         this.assigntmentGrade.push(assigntmentGrade);
 
     }
 }
-
-
-
-
-
-
+// !! would have liked to see an instance of your class using the method acceptStudentName to test that method
 
 // ### Challenge 1:
 // Create a Person class with three properties: name, weight, and height. Create a method that can calculate the BMI of a person using the formula below. Create an object of the class and use the function.
